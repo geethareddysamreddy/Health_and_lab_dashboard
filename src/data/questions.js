@@ -1,0 +1,103 @@
+// Configuration-driven question definitions for the Health Intake questionnaire.
+// The questionnaire engine (utils/questionnaireEngine.js) reads `condition` to
+// decide visibility, so new conditional questions can be added here without
+// touching any component code.
+
+export const QUESTIONS = [
+  {
+    id: "fullName",
+    question: "What is your full name?",
+    type: "text",
+    required: true,
+    placeholder: "e.g. John Doe",
+  },
+  {
+    id: "gender",
+    question: "What is your gender?",
+    type: "select",
+    required: true,
+    options: ["Male", "Female"],
+  },
+  {
+    id: "age",
+    question: "What is your age?",
+    type: "number",
+    required: true,
+    unit: "years",
+    min: 0,
+    max: 120,
+  },
+  {
+    id: "height",
+    question: "What is your height?",
+    type: "number",
+    required: true,
+    unit: "cm",
+    min: 0,
+    max: 300,
+  },
+  {
+    id: "weight",
+    question: "What is your weight?",
+    type: "number",
+    required: true,
+    unit: "kg",
+    min: 0,
+    max: 400,
+  },
+  {
+    id: "systolic",
+    question: "What is your systolic blood pressure?",
+    type: "number",
+    required: true,
+    unit: "mmHg",
+    min: 0,
+    max: 300,
+  },
+  {
+    id: "diastolic",
+    question: "What is your diastolic blood pressure?",
+    type: "number",
+    required: true,
+    unit: "mmHg",
+    min: 0,
+    max: 200,
+  },
+  {
+    id: "bloodSugar",
+    question: "What is your blood sugar level?",
+    type: "number",
+    required: true,
+    unit: "mg/dL",
+    min: 0,
+    max: 600,
+  },
+  {
+    id: "diabetes",
+    question: "Do you have diabetes?",
+    type: "select",
+    required: true,
+    options: ["Yes", "No"],
+  },
+  {
+    id: "medication",
+    question: "Are you currently taking any medication?",
+    type: "select",
+    required: true,
+    options: ["Yes", "No"],
+  },
+  {
+    id: "medicationDetails",
+    question: "Please list the medication(s) you are taking.",
+    type: "text",
+    required: true,
+    placeholder: "e.g. Metformin 500mg",
+    condition: { field: "medication", equals: "Yes" },
+  },
+  {
+    id: "confirmation",
+    question: "Review and confirm your information",
+    type: "confirmation",
+    required: false,
+  },
+];

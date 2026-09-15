@@ -1,0 +1,61 @@
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  min-width: 0;
+}
+
+.summary-card-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: var(--accent-bg);
+  color: var(--accent-fg);
+}
+
+.accent-blue {
+  --accent-bg: #e6f0ff;
+  --accent-fg: #2563eb;
+}
+.accent-green {
+  --accent-bg: #e5f8ee;
+  --accent-fg: #16a34a;
+}
+.accent-amber {
+  --accent-bg: #fef3e2;
+  --accent-fg: #d97706;
+}
+.accent-purple {
+  --accent-bg: #f1e9fe;
+  --accent-fg: #7c3aed;
+}
+
+.summary-card-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.summary-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.summary-card-label {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,44 @@
+.intake-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.intake-details-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.intake-details-group:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.intake-details-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.intake-details-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.intake-details-value {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .intake-details-group {
+    grid-template-columns: 1fr;
+  }
+}
